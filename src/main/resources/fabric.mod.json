@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "tickratechanger",
+  "version": "${version}",
+
+  "name": "TickrateChanger 1.14 :D",
+  "description": "Change the tickrate... in 1.14+!",
+  "authors": [
+    "famous1622"
+  ],
+  "license": "MIT",
+  "icon": "assets/tickratechanger/icon.png",
+
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "io.github.famous1622.tickratechanger.TickrateChanger"
+    ],
+    "client": [
+      "io.github.famous1622.tickratechanger.TickrateChanger"
+    ]
+  },
+  "mixins": [
+    "tickratechanger.mixins.json"
+  ],
+
+  "depends": {
+    "fabricloader": ">=0.4.0",
+    "fabric": "*"
+  },
+  "suggests": {
+    "flamingo": "*"
+  }
+}

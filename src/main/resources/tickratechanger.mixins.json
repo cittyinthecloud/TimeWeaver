@@ -1,0 +1,17 @@
+{
+  "required": true,
+  "package": "io.github.famous1622.tickratechanger.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "mixins": [
+    "MixinMinecraftServer"
+  ],
+  "client": [
+    "MixinRenderTickCounter",
+    "MixinSoundSystem",
+    "MixinSoundManager",
+    "MixinMinecraftClient"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
