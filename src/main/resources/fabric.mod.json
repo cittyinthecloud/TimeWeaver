@@ -1,27 +1,27 @@
 {
   "schemaVersion": 1,
-  "id": "tickratechanger",
+  "id": "tickweaver",
   "version": "${version}",
 
-  "name": "TickrateChanger 1.14 :D",
+  "name": "TickWeaver",
   "description": "Change the tickrate... in 1.14+!",
   "authors": [
     "famous1622"
   ],
   "license": "MIT",
-  "icon": "assets/tickratechanger/icon.png",
+  "icon": "assets/tickweaver/icon.png",
 
   "environment": "*",
   "entrypoints": {
     "main": [
-      "io.github.famous1622.tickratechanger.TickrateChanger"
+      "io.github.famous1622.tickweaver.TickWeaver"
     ],
     "client": [
-      "io.github.famous1622.tickratechanger.TickrateChanger"
+      "io.github.famous1622.tickweaver.TickWeaver"
     ]
   },
   "mixins": [
-    "tickratechanger.mixins.json"
+    "tickweaver.mixins.json"
   ],
 
   "depends": {

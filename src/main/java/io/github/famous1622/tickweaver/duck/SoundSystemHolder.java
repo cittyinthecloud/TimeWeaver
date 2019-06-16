@@ -1,4 +1,4 @@
-package io.github.famous1622.tickratechanger.duck;
+package io.github.famous1622.tickweaver.duck;
 
 import net.minecraft.client.sound.SoundSystem;
 

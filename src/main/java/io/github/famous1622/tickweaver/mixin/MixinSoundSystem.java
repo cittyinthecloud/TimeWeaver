@@ -1,6 +1,6 @@
-package io.github.famous1622.tickratechanger.mixin;
+package io.github.famous1622.tickweaver.mixin;
 
-import io.github.famous1622.tickratechanger.duck.TickrateConfigurable;
+import io.github.famous1622.tickweaver.duck.TickrateConfigurable;
 import net.minecraft.client.sound.SoundInstance;
 import net.minecraft.client.sound.SoundSystem;
 import net.minecraft.util.math.MathHelper;

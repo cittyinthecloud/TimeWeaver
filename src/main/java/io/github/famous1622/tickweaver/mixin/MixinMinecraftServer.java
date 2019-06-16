@@ -1,6 +1,6 @@
-package io.github.famous1622.tickratechanger.mixin;
+package io.github.famous1622.tickweaver.mixin;
 
-import io.github.famous1622.tickratechanger.duck.TickrateConfigurable;
+import io.github.famous1622.tickweaver.duck.TickrateConfigurable;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.server.ServerTask;
 import net.minecraft.util.NonBlockingThreadExecutor;

@@ -1,7 +1,7 @@
-package io.github.famous1622.tickratechanger.mixin;
+package io.github.famous1622.tickweaver.mixin;
 
-import io.github.famous1622.tickratechanger.duck.SoundSystemHolder;
-import io.github.famous1622.tickratechanger.duck.TickrateConfigurable;
+import io.github.famous1622.tickweaver.duck.SoundSystemHolder;
+import io.github.famous1622.tickweaver.duck.TickrateConfigurable;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.RenderTickCounter;
 import net.minecraft.client.sound.SoundManager;
@@ -14,9 +14,11 @@ import org.spongepowered.asm.mixin.Shadow;
 @Mixin(MinecraftClient.class)
 public abstract class MixinMinecraftClient extends NonBlockingThreadExecutor<Runnable> implements TickrateConfigurable, SoundSystemHolder {
 
-    @Shadow @Final private RenderTickCounter renderTickCounter;
+    @Shadow @Final
+    private RenderTickCounter renderTickCounter;
 
-    @Shadow private SoundManager soundManager;
+    @Shadow
+    private SoundManager soundManager;
 
     @SuppressWarnings("unused")
     public MixinMinecraftClient(String string_1) {
@@ -24,14 +26,14 @@ public abstract class MixinMinecraftClient extends NonBlockingThreadExecutor<Run
     }
 
     public float getTickrate() {
-        return ((TickrateConfigurable)renderTickCounter).getTickrate();
+        return ((TickrateConfigurable) renderTickCounter).getTickrate();
     }
 
     @Override
     public void setTickrate(float tickrate) {
-        ((TickrateConfigurable)renderTickCounter).setTickrate(tickrate);
-        if (getSoundSystem() != null){
-            ((TickrateConfigurable)getSoundSystem()).setTickrate(tickrate);
+        ((TickrateConfigurable) renderTickCounter).setTickrate(tickrate);
+        if (getSoundSystem() != null) {
+            ((TickrateConfigurable) getSoundSystem()).setTickrate(tickrate);
         }
     }
 
@@ -40,6 +42,6 @@ public abstract class MixinMinecraftClient extends NonBlockingThreadExecutor<Run
         if (this.soundManager == null) {
             return null;
         }
-        return ((SoundSystemHolder)this.soundManager).getSoundSystem();
+        return ((SoundSystemHolder) this.soundManager).getSoundSystem();
     }
 }

@@ -1,6 +1,6 @@
-package io.github.famous1622.tickratechanger.mixin;
+package io.github.famous1622.tickweaver.mixin;
 
-import io.github.famous1622.tickratechanger.duck.TickrateConfigurable;
+import io.github.famous1622.tickweaver.duck.TickrateConfigurable;
 import net.minecraft.client.render.RenderTickCounter;
 import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
@@ -9,10 +9,8 @@ import org.spongepowered.asm.mixin.Shadow;
 
 @Mixin(RenderTickCounter.class)
 public class MixinRenderTickCounter implements TickrateConfigurable {
-
-
-    @Mutable @Shadow @Final private float timeScale;
-
+    @Mutable @Shadow @Final
+    private float timeScale;
 
     @Override
     public float getTickrate() {
